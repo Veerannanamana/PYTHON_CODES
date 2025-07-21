@@ -20,3 +20,13 @@ def findcatencount(n,l):
 n=int(input())
 l=list(map(int,input().split()))
 print(findcatencount(n,l))
+
+n=int(input())
+x=bin(n)[2:]
+y=""
+for i in x:
+    if i==str(1):
+        y+=str(0)
+    else:
+        y+=str(1)
+print(int(y,8))
