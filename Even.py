@@ -10,3 +10,13 @@ def CountOddEven(n,l):
 n=int(input())
 l=list(map(int,input().split()))
 CountOddEven(n,l)
+
+
+def findcatencount(n,l):
+    count=0
+    for i in l:
+        count+=(i//12)
+    return count
+n=int(input())
+l=list(map(int,input().split()))
+print(findcatencount(n,l))
