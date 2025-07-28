@@ -1,0 +1,34 @@
+class person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def display_info(self):
+        print(f"My name is {self.name} i'm {self.age} year's old.")
+class student(person):
+    def __init__(self,name,age,Stu_id,branch,marks):
+        person.__init__(self,name,age)
+        self.Stu_id=Stu_id
+        self.branch=branch
+        self.marks=marks
+    def clculate(self):
+        a=0
+        aa=0
+        for k,v in self.marks.items():
+            a+=int(v)
+            aa+=1
+        print("Average Marks is ",(a/aa))
+class teacher(person):
+    def __init__(self,name,age,emp_id,subject):
+        person.__init__(self,name,age)
+        self.emp_id=emp_id
+        self.subject=subject
+    def display_teacher(self):
+        print("")
+p=person("Sriram",21)
+p.display_info()
+s=student("veera","19","503","AID",{'CN':77,'MEAN':54})
+s.clculate()
+
+
+
+
